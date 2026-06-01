@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import base.BaseTest;
-import Pages.LoginPage;
+import pages.LoginPage;
 import utilities.ConfigReader;
 public class LoginTest extends BaseTest {
     ConfigReader config = new ConfigReader();
@@ -50,6 +50,6 @@ public class LoginTest extends BaseTest {
         lp.clickSignupLogin();
         String uniqueEmail = "user" + System.currentTimeMillis() + "@gmail.com";
         lp.registerNewUser("TestUser", uniqueEmail);
-        Assert.assertTrue(driver.getCurrentUrl().contains("signsups"));
+        Assert.assertTrue(driver.getCurrentUrl().contains("signup"));
     }
 }

@@ -24,9 +24,15 @@ public class BasePage {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView(true);", element);
     }
+
     public void clickUsingJS(By locator){
         WebElement element = driver.findElement(locator);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].click();", element);
+    }
+    public void type(By locator, String text){
+
+        driver.findElement(locator)
+                .sendKeys(text);
     }
 }

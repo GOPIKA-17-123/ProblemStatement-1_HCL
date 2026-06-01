@@ -19,4 +19,9 @@
             <class name="test.CartTest"/>
         </classes>
     </test>
+     <test name="Form Validation Tests">
+            <classes>
+                <class name="test.FormValidationTest"/>
+            </classes>
+        </test>
 </suite>
